@@ -3,7 +3,15 @@ from pathlib import Path
 
 import cv2
 
-from config import IMAGE_DIR, OUTPUT_DIR, VIDEO_DIR, ensure_project_dirs
+from config import (
+    DETECTED_OUTPUT_DIR,
+    ORIGINAL_OUTPUT_DIR,
+    PROCESSED_OUTPUT_DIR,
+    RAW_IMAGE_DIR,
+    RAW_VIDEO_DIR,
+    TEST_IMAGE_DIR,
+    ensure_project_dirs,
+)
 
 
 def show_project_status() -> None:
@@ -11,9 +19,12 @@ def show_project_status() -> None:
 
     print("OpenCV project is ready.")
     print(f"OpenCV version: {cv2.__version__}")
-    print(f"Image folder: {IMAGE_DIR}")
-    print(f"Video folder: {VIDEO_DIR}")
-    print(f"Output folder: {OUTPUT_DIR}")
+    print(f"Raw image folder: {RAW_IMAGE_DIR}")
+    print(f"Test image folder: {TEST_IMAGE_DIR}")
+    print(f"Raw video folder: {RAW_VIDEO_DIR}")
+    print(f"Original output folder: {ORIGINAL_OUTPUT_DIR}")
+    print(f"Processed output folder: {PROCESSED_OUTPUT_DIR}")
+    print(f"Detected output folder: {DETECTED_OUTPUT_DIR}")
 
 
 def convert_to_gray(input_path: Path, output_path: Path) -> None:
@@ -39,7 +50,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output",
         type=Path,
-        default=OUTPUT_DIR / "gray_output.jpg",
+        default=PROCESSED_OUTPUT_DIR / "gray_output.jpg",
         help="Path where the processed image will be saved.",
     )
     return parser.parse_args()

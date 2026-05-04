@@ -3,11 +3,23 @@ __pycache__/
 .venv/
 venv/
 
-data/*
-!data/README.md
+data/images/raw/*
+!data/images/raw/.gitkeep
+data/images/test/*
+!data/images/test/.gitkeep
+data/videos/raw/*
+!data/videos/raw/.gitkeep
 
-outputs/*
+outputs/original/*
+!outputs/original/.gitkeep
+outputs/processed/*
+!outputs/processed/.gitkeep
+outputs/detected/*
+!outputs/detected/.gitkeep
+outputs/results.json
 !outputs/.gitkeep
+!outputs/README.md
+!outputs/results.example.json
 
 *.mp4
 *.avi
