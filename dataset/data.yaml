@@ -1,0 +1,10 @@
+path: dataset
+train: images/train
+val: images/val
+
+names:
+  0: can
+  1: pet_bottle
+  2: paper_box
+  3: pouch
+  4: glass_bottle

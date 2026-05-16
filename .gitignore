@@ -3,12 +3,25 @@ __pycache__/
 .venv/
 venv/
 
+runs/
+*.pt
+*.cache
+
 data/images/raw/*
 !data/images/raw/.gitkeep
 data/images/test/*
 !data/images/test/.gitkeep
 data/videos/raw/*
 !data/videos/raw/.gitkeep
+
+dataset/images/**/*.jpg
+dataset/images/**/*.jpeg
+dataset/images/**/*.png
+dataset/images/**/*.webp
+!dataset/images/train/.gitkeep
+!dataset/images/val/.gitkeep
+
+target_detection/
 
 outputs/original/*
 !outputs/original/.gitkeep
